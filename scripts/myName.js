@@ -4,10 +4,23 @@
 // iedereen: https://fdnd.directus.app/items/person/?fields=id,name,github_handle,avatar&filter={%22squads%22:{%22squad_id%22:{%22name%22:%22Minor%20Web%20Dev%22}}}&sort=name
 
 const baseURL = 'https://fdnd.directus.app/';
-const endpointMe = 'items/person/67';
+const endpointMe = 'items/person/199';
+
+const myURL = baseURL + endpointMe;
 
 
+// ik haal de data van mijn ID op (199)
+getData(myURL).then( data199 => {
 
+	// ik sla mijn naam data op een in een variable
+	let myName = data199.data.name;
+
+	// ik selecteer de h1 uit de HTML en sla die op in een variable
+	let deH1 = document.querySelector("h1");
+
+	// ik pas de textcontent aan door de variable waar ik de h1 in had opgeslagen aan te passen naar de variable myName
+	deH1.textContent = myName;
+} );
 
 
 

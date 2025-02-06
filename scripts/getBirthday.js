@@ -1,5 +1,11 @@
+getData(myURL).then(data199 => {
+    let myBirthdate = data199.data.birthdate;
 
+    let myTime = document.createElement("time");
+    myTime.textContent = myBirthdate; // Assign the birthdate to the new <p>
 
+    mySection.append(myTime); // Append the new paragraph with the correct text
+});
 
 
 

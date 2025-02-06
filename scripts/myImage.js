@@ -1,5 +1,16 @@
+const mySection = document.querySelector('section:nth-of-type(1)');
 
+getData(myURL).then( data199 => {
 
+    let myAvatar = data199.data.avatar;
+    let myName = data199.data.name;
+
+    let myImage = document.createElement("img");
+    myImage.src = myAvatar;
+    myImage.alt = myName;
+
+    mySection.append(myImage);
+});
 
 
 
